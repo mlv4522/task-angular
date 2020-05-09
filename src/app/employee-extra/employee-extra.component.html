@@ -1,0 +1,6 @@
+<p *ngIf="!projects.length">...список пуст!</p>
+<div class="about">
+<ul>
+  <li *ngFor="let p of projects">{{p.nameOfProdject}}</li>
+</ul>
+</div>

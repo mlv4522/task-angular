@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Список всех сотрудников</h1>
+
+  <p *ngIf="!employeesService.employees.length">...список пуст!</p>
+  <div class="card" *ngFor="let emp of employeesService.employees; let idx = index">
+      <h3>
+        <p>
+          <a [routerLink]="['/employee', emp.id]">
+            <strong>{{idx + 1}}. </strong>
+            {{emp.lastName + ' ' + emp.firstName}}
+          </a>
+          <span>
+            <button mat-raised-button color="primary"
+              [routerLink]="['/create-employee']" 
+              [queryParams]="{'id': emp.id}"
+            >Редактировать</button>&nbsp;
+            <button mat-raised-button color="warn" (click)="delEmployee(emp.id)">Удалить</button>
+          </span>
+        </p>
+      </h3>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<nav class="navbar"> 
+
+ <a [routerLink]="['/']" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"> 
+  <mat-icon aria-hidden="false">home</mat-icon></a>
+
+
+<a routerLinkActive="active">
+  <button mat-button class="mat-button" 
+  [matMenuTriggerFor]="menuEmployees">Сотрудники</button>
+  <mat-menu #menuEmployees="matMenu">
+    <button mat-menu-item [routerLink]="['/create-employee']">Создать сотрудника</button>
+    <button mat-menu-item [routerLink]="['/employees']">Все сотрудники</button>
+  </mat-menu>
+</a>
+
+<a routerLinkActive="active">
+  <button mat-button class="mat-button" 
+  [matMenuTriggerFor]="menuProjects">Проекты</button>
+  <mat-menu #menuProjects="matMenu">
+    <button mat-menu-item [routerLink]="['/create-project']">Создать проект</button>
+    <button mat-menu-item [routerLink]="['/projects']">Все проекты</button>
+  </mat-menu>
+</a>
+
+<a [routerLink]="['/about']" routerLinkActive="active">About</a>
+</nav>
+
+
+<div class="container">
+  <div class="card" >
+
+    <router-outlet></router-outlet> 
+
+  </div>
+</div>

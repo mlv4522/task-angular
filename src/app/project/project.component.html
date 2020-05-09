@@ -1,0 +1,14 @@
+<div class="container about">
+  <h1>Проект</h1>
+  <mat-card>
+    <strong> {{project.nameOfProdject}}</strong>
+    <br><br>
+    <p *ngIf="employees.length">Сотрудники, закрепленные за проектом:</p>
+    <ul>
+      <li *ngFor="let emp of employees">
+        &nbsp; &nbsp;{{emp.lastName + ' '+ emp.firstName }}</li>
+    </ul>
+    <br>
+    <button class="btn" [routerLink]="['/projects']">Назад</button>
+  </mat-card>
+</div>

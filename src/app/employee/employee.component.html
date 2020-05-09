@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Сотрудник</h1>
+  <mat-card>
+    <strong> {{employee.lastName}}</strong>
+    {{' ' +employee.firstName + ' ' + employee.middleName}}
+    <p>Дата рождения: {{employee.birthday | date:"dd.MM.yyyy"}}</p>
+    <!-- <p><a [routerLink]="[path, 'extra']">Проекты, в которых участвует</a></p> -->
+    <p *ngIf="projects.length"><a class="extra" 
+      [routerLink]="[path, 'extra']">Проекты, в которых участвует</a></p>
+    <router-outlet></router-outlet>
+    <br>
+    <button class="btn" [routerLink]="['/employees']">Назад</button>
+  </mat-card>
+</div>

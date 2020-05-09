@@ -1,0 +1,39 @@
+<div class="container">
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>{{title}}</h1>
+
+    <mat-form-field class="form-control">
+      <mat-label>Фамилия</mat-label>
+      <input matInput placeholder="Фамилия"  formControlName="lastName">
+      <div class="validation"></div> 
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-control">
+      <mat-label>Имя</mat-label>
+      <input matInput placeholder="Имя" formControlName="firstName">
+      <div class="validation"></div> 
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-control">
+      <mat-label>Отчество</mat-label>
+      <input matInput placeholder="Отчество" formControlName="middleName">
+      <div class="validation"></div> 
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-control" >
+      <mat-label>Дата Рождения</mat-label>
+      <!-- <input matInput placeholder="Дата" formControlName="birthday">
+      <div class="validation"></div>  -->
+    
+      <input matInput [matDatepicker]="picker" formControlName="birthday" >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+       
+    </mat-form-field>
+    <br><br>
+
+    <button class="btn" [routerLink]="['/employees']">Назад</button>
+    <button class="btn" type="submit" [disabled]="form.invalid">Сохранить</button>
+  </form>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Список всех проектов</h1>
+
+  <p *ngIf="!projectService.projects.length">...список пуст!</p>
+  <div class="card" *ngFor="let project of projectService.projects; let idx = index">
+      <h4>
+        <p>
+          <a [routerLink]="['/project', project.id]">
+            <strong>{{idx + 1}}. </strong> {{project.nameOfProdject}}
+          </a>
+          <span>
+            <button mat-raised-button color="primary"
+              [routerLink]="['/create-project']" 
+              [queryParams]="{'id': project.id}"
+            >Редактировать</button>&nbsp;
+            <button mat-raised-button color="warn" 
+                    (click)="delProject(project.id)">Удалить</button>
+          </span>
+        </p>
+      </h4>
+  </div>
+</div>

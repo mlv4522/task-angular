@@ -1,0 +1,24 @@
+<div class="container">
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>{{title}}</h1>
+
+    <mat-form-field class="form-control">
+      <mat-label>Название Проекта</mat-label>
+      <input matInput placeholder="Название" formControlName="nameOfProdject">
+      <div class="validation"></div>
+    </mat-form-field>
+    <br>
+
+    <!-- Select with multiple selection -->
+    <mat-form-field>
+      <mat-label>Список</mat-label>
+      <mat-select formControlName="idEmployee" multiple>
+        <mat-option *ngFor="let emp of employees" [value]="emp.id">{{emp.lastName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <br><br>
+    <button class="btn" [routerLink]="['/projects']">Назад</button>
+    <button class="btn" type="submit" [disabled]="form.invalid">Сохранить</button>
+  </form>
+</div>
