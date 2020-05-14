@@ -9,7 +9,8 @@ import { DialogContentComponent } from '../dialog-content/dialog-content.compone
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
-
+  searchStr = ''
+  
   constructor(public projectService: ProjectService, 
               public dialog: MatDialog) { }
 

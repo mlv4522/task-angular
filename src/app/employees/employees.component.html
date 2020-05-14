@@ -2,7 +2,13 @@
   <h1>Список всех сотрудников</h1>
 
   <p *ngIf="!employeesService.employees.length">...список пуст!</p>
-  <div class="card" *ngFor="let emp of employeesService.employees; let idx = index">
+  <div class="card">
+    <div class="form-control">
+      <input type="text" placeholder="Найти..." [(ngModel)]="searchStr">
+    </div>
+  </div>
+  <div class="card" 
+    *ngFor="let emp of employeesService.employees | search:searchStr; let idx = index">
       <h3>
         <p>
           <a [routerLink]="['/employee', emp.id]">

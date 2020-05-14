@@ -2,7 +2,14 @@
   <h1>Список всех проектов</h1>
 
   <p *ngIf="!projectService.projects.length">...список пуст!</p>
-  <div class="card" *ngFor="let project of projectService.projects; let idx = index">
+  <div class="card">
+    <div class="form-control">
+      <input type="text" placeholder="Найти..." [(ngModel)]="searchStr">
+    </div>
+  </div>
+
+  <div class="card" 
+    *ngFor="let project of projectService.projects | search:searchStr; let idx = index">
       <h4>
         <p>
           <a [routerLink]="['/project', project.id]">

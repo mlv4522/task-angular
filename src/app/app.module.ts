@@ -1,3 +1,4 @@
+import { SearchPipe } from './pipe/search.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material/material.module';
@@ -32,7 +33,8 @@ import { DialogContentComponent } from './dialog-content/dialog-content.componen
       CreateProjectComponent,
       HomeComponent,
       EmployeeExtraComponent,
-      DialogContentComponent
+      DialogContentComponent,
+      SearchPipe
    ],
    imports: [
 	 BrowserModule,

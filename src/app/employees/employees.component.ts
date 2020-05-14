@@ -10,6 +10,7 @@ import { ProjectService } from '../services/project.service';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent {
+  searchStr = ''
 
   constructor(public employeesService: EmployeesService,
               private projectService: ProjectService,
