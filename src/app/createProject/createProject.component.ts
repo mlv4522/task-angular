@@ -48,6 +48,8 @@ export class CreateProjectComponent implements OnInit {
   }
 
   submit() {
+    if (this.form.invalid) { return }
+    
     let formData = { ...this.form.value }
     if (this.id) {
       formData.id = this.id

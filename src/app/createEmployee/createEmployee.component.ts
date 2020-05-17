@@ -36,8 +36,8 @@ export class CreateEmployeeComponent implements OnInit {
           this.lastName = employee.lastName
           this.firstName = employee.firstName
           this.middleName = employee.middleName
-          this.birthday = employee.birthday
-          this.id = employee.id
+          this.birthday = new Date(employee.birthday)
+          this.id = employee.id 
           this.idProject = employee.idProject
         }
       }
@@ -52,6 +52,7 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   submit() {
+    if (this.form.invalid) { return }
 
     let formData = { ...this.form.value }
     if (this.id) {
