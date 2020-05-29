@@ -56,7 +56,7 @@ export class CreateProjectComponent implements OnInit {
       this.projectService.editProject(this.project, formData)
     } else {
       formData.id = Math.trunc(Math.random() * 100000)
-      this.projectService.eddProject(formData)
+      this.projectService.addProject(formData)
     }
 
     this.router.navigate(['/projects'])

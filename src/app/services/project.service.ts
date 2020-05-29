@@ -11,9 +11,9 @@ export class ProjectService {
 
   projects: Project[] = JSON.parse(localStorage.getItem('projects')) || [
     {nameOfProdject: 'Angular', id: 11, idEmployee:[12, 13]},
-    {nameOfProdject: 'Java', id: 12, idEmployee: [12, 13 ,14]},
+    {nameOfProdject: 'Java', id: 12, idEmployee: [11, 12, 13]},
     {nameOfProdject: 'Vew', id: 13, idEmployee: []},
-    {nameOfProdject: 'JavaScript', id: 14, idEmployee: [14]},
+    {nameOfProdject: 'JavaScript', id: 14, idEmployee: [13]},
   ]
 
   getById(id: number){
@@ -26,7 +26,7 @@ export class ProjectService {
     localStorage.setItem('projects', JSON.stringify(this.projects));    
   }
 
-  eddProject(project: Project) {
+  addProject(project: Project) {
     this.projects.push(project)
     localStorage.setItem('projects', JSON.stringify(this.projects));
   }

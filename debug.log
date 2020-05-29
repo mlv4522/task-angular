@@ -1,0 +1,15 @@
+[0519/221002.636:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/221002.653:ERROR:exception_snapshot_win.cc(98)] thread ID 7864 not found in process
+[0519/221002.665:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения. (0xc000010a)
+[0519/222351.952:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/222351.956:ERROR:exception_snapshot_win.cc(98)] thread ID 8108 not found in process
+[0519/222351.956:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения. (0xc000010a)
+[0519/225012.862:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/225012.866:ERROR:exception_snapshot_win.cc(98)] thread ID 7836 not found in process
+[0519/225012.866:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения. (0xc000010a)
+[0519/225414.636:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/225414.640:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/225414.640:ERROR:exception_snapshot_win.cc(98)] thread ID 4744 not found in process
+[0519/230604.362:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/230604.364:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0519/230604.364:ERROR:exception_snapshot_win.cc(98)] thread ID 7520 not found in process

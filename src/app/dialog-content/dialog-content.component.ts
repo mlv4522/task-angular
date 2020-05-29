@@ -9,17 +9,12 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
       <p>{{data.text}}</p>
       </mat-dialog-content>
       <mat-dialog-actions align="end">
-      <!-- <button mat-button mat-dialog-close>Cancel</button> -->
       <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Ок</button>
   </mat-dialog-actions>
   `
 })
-export class DialogContentComponent implements OnInit {
+export class DialogContentComponent {
 
   constructor(public dialogRef: MatDialogRef<DialogContentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-  ngOnInit() {
-  }
-
 }

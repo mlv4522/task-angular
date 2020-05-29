@@ -63,7 +63,7 @@ export class CreateEmployeeComponent implements OnInit {
     } else {
       formData.id = Math.trunc(Math.random() * 100000)
       formData.idProject = []
-      this.employeesService.eddEmployee(formData)
+      this.employeesService.addEmployee(formData)
     }
     this.router.navigate(['/employees'])
   }

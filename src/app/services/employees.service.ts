@@ -28,7 +28,8 @@ export class EmployeesService {
 
   getById(id: number){
     return this.employees.find(emp => emp.id === id) ||
-    {lastName: 'error', firstName: 'error', middleName: 'error', birthday: '01.01.2000', id: 666, idProject: []}
+    {lastName: 'error', firstName: 'error', middleName: 'error', 
+      birthday: '01.01.2000', id: 666, idProject: []}
   }
 
   delById(id: number){
@@ -36,7 +37,7 @@ export class EmployeesService {
     localStorage.setItem('employees', JSON.stringify(this.employees));
   }
 
-  eddEmployee(employee: Employee) {
+  addEmployee(employee: Employee) {
     this.employees.push(employee)
     localStorage.setItem('employees', JSON.stringify(this.employees));
   }
